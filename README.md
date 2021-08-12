@@ -1,6 +1,8 @@
 Batutah Postgresql
 =========
 
+Ansible role for install postgresql 13 on Ubuntu 20.04
+
 ## Vars
 
 ```yml
@@ -45,3 +47,11 @@ postgresql_users:
     state: # defaults to 'present'
 
 ```
+
+## References
+
+- https://wiki.postgresql.org/wiki/Apt
+- https://github.com/geerlingguy/ansible-role-postgresql
+
+
+&copy; 2021 - Andi Susanto
