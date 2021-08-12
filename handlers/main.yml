@@ -1,0 +1,6 @@
+---
+# handlers file for roles/batutah.postgresql
+- name: restart postgresql
+  systemd:
+    service: postgresql
+    state: restarted

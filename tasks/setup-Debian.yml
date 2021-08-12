@@ -1,0 +1,26 @@
+---
+# tasks file for roles/batutah.postgresql
+- name: Install dependencies
+  apt:
+    name:
+      - vim
+      - bash-completion
+      - wget
+      - python3-psycopg2
+    state: latest
+
+- name: Add postgresql key
+  apt_key: 
+    url: https://www.postgresql.org/media/keys/ACCC4CF8.asc
+    state: present
+
+- name: Add postgresql repositories
+  shell: echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+
+- name: Install postgresql 13
+  apt:
+    name:
+      - postgresql-13
+      - postgresql-client-13
+    state: latest
+    update_cache: yes
