@@ -9,10 +9,14 @@ postgresql_hba_entries:
 postgresql_global_config_options:
   - option: listen_addresses
     value: '*'
+    state: present
 
 postgresql_config_path: /etc/postgresql/13/main
 
 postgresql_user: postgres
+postgresql_group: postgres
 
 postgresql_unix_socket_directories: 
   - /var/run/postgresql
+
+allow_world_readable_tmpfiles: true
