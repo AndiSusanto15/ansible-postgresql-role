@@ -1,5 +1,7 @@
 ---
 # defaults file for roles/batutah.postgresql
+postgresql_version: 13
+
 postgresql_hba_entries:
   - {type: local, database: all, user: postgres, auth_method: peer}
   - {type: local, database: all, user: all, auth_method: peer}
