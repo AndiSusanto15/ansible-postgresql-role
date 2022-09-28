@@ -13,7 +13,7 @@ postgresql_global_config_options:
     value: '*'
     state: present
 
-postgresql_config_path: /etc/postgresql/13/main
+postgresql_config_path: /etc/postgresql/{{ postgresql_version}}/main
 
 postgresql_user: postgres
 postgresql_group: postgres
